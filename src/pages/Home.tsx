@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import AppShell from '@/components/layout/AppShell'
-import ChapterBriefing from '@/components/chapter/ChapterBriefing'
 import ChapterLauncher from '@/components/chapter/ChapterLauncher'
 import NetworkSchematic from '@/components/NetworkSchematic'
 import { chapterOne } from '@/data/chapters'
+import ChapterOneGame from '@/game/ChapterOneGame'
 import '../App.css'
 
-type ShellView = 'overview' | 'chapter'
+type ShellView = 'overview' | 'game'
 
 export default function Home() {
   const [view, setView] = useState<ShellView>('overview')
@@ -26,7 +26,7 @@ export default function Home() {
                 A story-driven learning environment for building practical networking
                 knowledge—one device, one signal, one decision at a time.
               </p>
-              <ChapterLauncher chapter={chapterOne} onOpen={() => setView('chapter')} />
+              <ChapterLauncher chapter={chapterOne} onStart={() => setView('game')} />
             </div>
 
             <div className="overview__visual">
@@ -34,7 +34,7 @@ export default function Home() {
               <section className="build-readout" aria-labelledby="build-readout-title">
                 <div className="build-readout__heading">
                   <h2 id="build-readout-title">BUILD READOUT</h2>
-                  <span>01 / 07</span>
+                  <span>02 / 07</span>
                 </div>
                 <dl>
                   <div>
@@ -42,11 +42,15 @@ export default function Home() {
                     <dd className="status-ready">Operational</dd>
                   </div>
                   <div>
-                    <dt>Design tokens</dt>
-                    <dd className="status-ready">Installed</dd>
+                    <dt>Chapter entry</dt>
+                    <dd className="status-ready">Playable opening</dd>
                   </div>
                   <div>
-                    <dt>Gameplay systems</dt>
+                    <dt>BFree.com</dt>
+                    <dd className="status-ready">Job available</dd>
+                  </div>
+                  <div>
+                    <dt>Location exploration</dt>
                     <dd>Later milestone</dd>
                   </div>
                 </dl>
@@ -54,7 +58,7 @@ export default function Home() {
             </div>
           </section>
         ) : (
-          <ChapterBriefing chapter={chapterOne} onBack={() => setView('overview')} />
+          <ChapterOneGame onExit={() => setView('overview')} />
         )}
       </main>
     </AppShell>

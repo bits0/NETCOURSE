@@ -17,7 +17,7 @@ export default function AppShell({ children }: AppShellProps) {
           </div>
           <div className="build-state">
             <span className="build-state__dot" aria-hidden="true" />
-            FOUNDATION BUILD
+            CHAPTER 01 / OPENING
           </div>
         </div>
       </header>
@@ -33,7 +33,7 @@ export default function AppShell({ children }: AppShellProps) {
       </div>
 
       <footer className="shell-footer">
-        <span>STEP 01 / PROJECT FOUNDATION</span>
+        <span>STEP 02 / GAME ENTRY &amp; BFREE.COM</span>
         <span>REACT · TYPESCRIPT · VITE</span>
       </footer>
     </div>
