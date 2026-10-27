@@ -1,0 +1,62 @@
+:root {
+  /* Primitive palette: cool graphite, slate, and green-cyan. */
+  --nc-ink-990: oklch(0.145 0.012 240);
+  --nc-ink-975: oklch(0.165 0.013 240);
+  --nc-graphite-950: oklch(0.185 0.014 240);
+  --nc-graphite-900: oklch(0.215 0.015 240);
+  --nc-graphite-800: oklch(0.28 0.016 240);
+  --nc-slate-500: oklch(0.65 0.025 230);
+  --nc-slate-300: oklch(0.79 0.035 230);
+  --nc-slate-100: oklch(0.92 0.025 230);
+  --nc-mint-400: oklch(0.88 0.12 175);
+  --nc-mint-500: oklch(0.79 0.12 175);
+  --nc-blue-400: oklch(0.78 0.07 230);
+
+  /* Semantic color tokens. */
+  --nc-color-bg: var(--nc-ink-990);
+  --nc-color-bg-raised: var(--nc-ink-975);
+  --nc-color-surface: var(--nc-graphite-950);
+  --nc-color-surface-hover: var(--nc-graphite-900);
+  --nc-color-text: var(--nc-slate-100);
+  --nc-color-text-muted: var(--nc-slate-300);
+  --nc-color-text-subtle: var(--nc-slate-500);
+  --nc-color-accent: var(--nc-mint-400);
+  --nc-color-accent-strong: var(--nc-mint-500);
+  --nc-color-accent-secondary: var(--nc-blue-400);
+  --nc-color-on-accent: var(--nc-ink-990);
+  --nc-color-border: oklch(0.36 0.025 230 / 0.58);
+  --nc-color-border-soft: oklch(0.36 0.025 230 / 0.3);
+  --nc-color-grid: oklch(0.55 0.035 230 / 0.09);
+
+  /* Typography. */
+  --nc-font-sans: 'IBM Plex Sans', sans-serif;
+  --nc-font-mono: 'IBM Plex Mono', monospace;
+  --nc-text-xs: 0.75rem;
+  --nc-text-sm: 0.875rem;
+  --nc-text-base: 1rem;
+  --nc-text-lg: 1.125rem;
+  --nc-leading-body: 1.65;
+
+  /* Four/eight-pixel spacing rhythm. */
+  --nc-space-1: 0.25rem;
+  --nc-space-2: 0.5rem;
+  --nc-space-3: 0.75rem;
+  --nc-space-4: 1rem;
+  --nc-space-5: 1.25rem;
+  --nc-space-6: 1.5rem;
+  --nc-space-8: 2rem;
+  --nc-space-10: 2.5rem;
+  --nc-space-12: 3rem;
+  --nc-space-16: 4rem;
+
+  /* Component tokens. */
+  --nc-shell-max: 90rem;
+  --nc-shell-header: oklch(0.165 0.013 240 / 0.92);
+  --nc-panel-bg: oklch(0.215 0.015 240 / 0.54);
+  --nc-panel-inset: inset 0 1px 0 oklch(0.92 0.025 230 / 0.035);
+  --nc-focus-ring: 0 0 0 4px oklch(0.88 0.12 175 / 0.14);
+  --nc-radius-sm: 2px;
+  --nc-radius-md: 4px;
+  --nc-duration-fast: 160ms;
+  --nc-duration-base: 220ms;
+}

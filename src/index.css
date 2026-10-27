@@ -1,0 +1,57 @@
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-color: var(--nc-color-border);
+  }
+
+  html {
+    color-scheme: dark;
+    background: var(--nc-color-bg);
+  }
+
+  body {
+    margin: 0;
+    min-width: 20rem;
+    min-height: 100dvh;
+    background: var(--nc-color-bg);
+    color: var(--nc-color-text);
+    font-family: var(--nc-font-sans);
+    font-size: var(--nc-text-base);
+    line-height: var(--nc-leading-body);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--nc-color-accent);
+    outline-offset: 4px;
+    box-shadow: var(--nc-focus-ring);
+  }
+
+  ::selection {
+    background: var(--nc-color-accent);
+    color: var(--nc-color-on-accent);
+  }
+
+  #root {
+    min-height: 100dvh;
+  }
+}
